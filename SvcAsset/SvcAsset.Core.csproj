@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <LangVersion>8</LangVersion>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Queries\Reservation2\**" />
+    <EmbeddedResource Remove="Queries\Reservation2\**" />
+    <None Remove="Queries\Reservation2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Event2.cs" />
+    <Compile Remove="Models\ReservationModel2.cs" />
+  </ItemGroup>
+    <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="1.3.2" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="3.1.1" />
+    <PackageReference Include="NetTopologySuite" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.20" />
+  </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DomainEventHandler\" />
+      <Folder Include="DomainEvents\" />
+    </ItemGroup>
+
+</Project>
